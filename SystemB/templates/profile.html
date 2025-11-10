@@ -77,16 +77,13 @@
 
     <h3>Update Profile</h3>
     <form method="POST" action="/profile/update/">
-      <label>Full Name:</label>
-      <input type="text" name="fullname" value="{{ user.fullname }}" required>
-
-      <label>Email:</label>
-      <input type="email" name="email" value="{{ user.email }}" required>
+     <p><strong>Name:</strong> {{ profile.fullname }}</p>
+     <p><strong>Email:</strong> {{ user.email }}</p>
 
       <button type="submit">Save Changes</button>
     </form>
 
-    <a href="logout.html">Logout</a>
+    <a href="Logout.html">Logout</a>
   </div>
 </body>
 </html>

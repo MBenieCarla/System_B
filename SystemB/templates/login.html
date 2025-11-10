@@ -63,17 +63,32 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Login</h1>
-    <form method="POST" action="">
-      {%csrf_token%}
-      <label>Fullname:</label>
-      <input type="text" name="efullname" required>
+ <div class="container">
+        <h2>Login</h2>
+        
+        {% if messages %}
+            {% for message in messages %}
+                <div class="error">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
 
-      <label>Password:</label>
-      <input type="password" name="password" required>
-
-      <button type="submit">Login</button>
+        <form method="POST">
+            {% csrf_token %}
+            
+            <div>
+                <label>Email:</label>
+                <input type="email" name="email" class="form-control" required>
+            </div>
+            
+            <div>
+                <label>Password:</label>
+                <input type="password" name="password" class="form-control" required>
+            </div>
+            
+            <button type="submit">Login</button>
+        </form>
+        
+        <p>Don't have an account? <a href="{% url 'register' %}">Register here</a></p>
     </form>
 
     <p>Do not have an account? <a href="Register.html">Register here</a></p>

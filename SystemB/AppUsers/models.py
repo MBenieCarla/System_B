@@ -1,9 +1,11 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-class Profile(models.Model):
+class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    profile_picture = models.ImageField(upload_to='profile_pics/', default='default.jpg')
-
-    def __str__(self):
-        return f'{self.user.username} Profile'
+    fullname = models.CharField(max_length=100)
+    email = models.EmailField(unique=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    
+    def _str_(self):
+        return self.fullname
