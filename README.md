@@ -14,5 +14,8 @@ authenticated users are logged in successfully while unauthorized user i.e users
 upon succesfull login, users welcomed into their profile page with their name and email displayed on the screen and the date since they were registered as users. users can then view their profile pictures
 users can then logout of the system.
 
+**administrative rights**
+implemented an admin module with restricted access to its dashboard 
+
 **databases**
 implemented mySQL workbench to create a database connection to validate and authenticate users and register new users
