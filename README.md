@@ -17,5 +17,11 @@ users can then logout of the system.
 **administrative rights**
 implemented an admin module with restricted access to its dashboard 
 
+**additional apps**
+destination and booking pages
+booking pages include destinations and dates booked by the user
+
+destination page featuring available destinations
+
 **databases**
 implemented mySQL workbench to create a database connection to validate and authenticate users and register new users
