@@ -76,15 +76,17 @@ WSGI_APPLICATION = 'SystemB.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'systemb',
-    #     'USER': 'root',
-    #     'PASSWORD': 'Sisters@2025',
-    #     'HOST': '127.0.0.1',
-    #     'PORT': '3306',
-    # }
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'travel_db',
+        'USER': 'travel_user',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
 }
+
+   
 
 
 # Password validation

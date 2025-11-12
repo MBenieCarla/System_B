@@ -1,19 +1,23 @@
-from django.shortcuts import render, redirect
-from .models import Booking, Destination  # or whatever models you have
-from .forms import BookingForm  # if you have a form
-from .models import Booking, Destination
-
+# bookings/views.py
+from django.shortcuts import render, redirect, get_object_or_404
+from .models import Booking
+from destinations.models import Destination
+from .forms import BookingForm
 
 def create_booking(request, destination_id):
-    # Example logic
-    destination = Destination.objects.get(id=destination_id)
+    destination = get_object_or_404(Destination, id=destination_id)
+    
     if request.method == "POST":
         form = BookingForm(request.POST)
         if form.is_valid():
             booking = form.save(commit=False)
             booking.destination = destination
             booking.save()
-            return redirect('some_view_name')  # redirect somewhere
+            return redirect('home')  # Uses the URL name for homepage
     else:
         form = BookingForm()
-    return render(request, 'bookings/create_booking.html', {'form': form, 'destination': destination})
+
+    return render(request, 'bookings/bookings.html', {
+        'form': form,
+        'destination': destination
+    })
