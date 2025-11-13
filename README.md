@@ -13,3 +13,15 @@ Users log into the system via the login page using their email and password
 authenticated users are logged in successfully while unauthorized user i.e users without existing accounts register through the registration page using their full name, email and password.
 upon succesfull login, users welcomed into their profile page with their name and email displayed on the screen and the date since they were registered as users. users can then view their profile pictures
 users can then logout of the system.
+
+**administrative rights**
+implemented an admin module with restricted access to its dashboard 
+
+**additional apps**
+destination and booking pages
+booking pages include destinations and dates booked by the user
+
+destination page featuring available destinations
+
+**databases**
+implemented mySQL workbench to create a database connection to validate and authenticate users and register new users
