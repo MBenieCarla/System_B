@@ -26,4 +26,4 @@ users can update their profiles and save changes
 destination page featuring available destinations
 
 **databases**
-implemented mySQL workbench to create a database connection to validate and authenticate users and register new users
+implemented mySQL workbench/ postgreSQL to create a database connection to validate and authenticate users and register new users
