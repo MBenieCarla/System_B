@@ -13,11 +13,12 @@ def create_booking(request, destination_id):
             booking = form.save(commit=False)
             booking.destination = destination
             booking.save()
-            return redirect('home')  # Uses the URL name for homepage
+            return redirect('home')
     else:
         form = BookingForm()
-
-    return render(request, 'bookings/bookings.html', {
+    
+    context = {
         'form': form,
-        'destination': destination
-    })
+        'destination': destination,
+    }
+    return render(request, 'bookings/create_booking.html', context)
