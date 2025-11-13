@@ -20,6 +20,8 @@ implemented an admin module with restricted access to its dashboard
 **additional apps**
 destination and booking pages
 booking pages include destinations and dates booked by the user
+in the booking app users fill in their information with their name, email and date
+users can update their profiles and save changes 
 
 destination page featuring available destinations
 
